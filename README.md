@@ -1,1 +1,1 @@
-Doviz Çevirici uygulamasını kullanmak için fixer.io/ API Access Key'ine ihtiyacınız var 
+Doviz Çevirici uygulamasını kullanmak için https://fixer.io/ API Access Key'ine ihtiyacınız var 
