@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="static/css/styles.min.css">
+    <link rel="stylesheet" href="static\bootstrap\css\bootstrap.min.css">
+</head>
+
+<body>
+    <section class="login-dark">
+
+        <form method="POST">
+            <div class=" text-center pb-4">
+                <h1>Döviz Çevirici</h1>
+            </div>
+            <div class="form-group">
+                <div class="input-group" style="width: 40%;">
+                    <div class="input-group-prepend"><span class="input-group-text">1. Para Birimi</span></div>
+                    <select class="form-control" style="border:1px solid #e6e6e6; border-top-right-radius: 4px; border-bottom-right-radius: 4px;" name="d-1">
+                        <optgroup label="1. Para Birimi" style="background: #1e2833;">
+
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>JPY</option>
+                            <option>BGN</option>
+                            <option>CZK</option>
+                            <option>DKK</option>
+                            <option>GBP</option>
+                            <option>HUF</option>
+                            <option>PLN</option>
+                            <option>RON</option>
+                            <option>SEK</option>
+                            <option>CHF</option>
+                            <option>ISK</option>
+                            <option>NOK</option>
+                            <option>HRK</option>
+                            <option>RUB</option>
+                            <option>TRY</option>
+                            <option>AUD</option>
+                            <option>BRL</option>
+                            <option>CAD</option>
+                            <option>CNY</option>
+                            <option>HKD</option>
+                            <option>IDR</option>
+                            <option>ILS</option>
+                            <option>INR</option>
+                            <option>KRW</option>
+                            <option>MXN</option>
+                            <option>MYR</option>
+                            <option>NZD</option>
+                            <option>PHP</option>
+                            <option>SGD</option>
+                            <option>THB</option>
+                            <option>ZAR</option>
+
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group" style="width: 40%;">
+                    <div class="input-group-prepend"><span class="input-group-text">2. Para Birimi</span></div>
+                    <select class="form-control" name="d-2" style="border:1px solid #e6e6e6; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+                        <optgroup label="2. Para Birimi" style="background: #1e2833;">
+
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>JPY</option>
+                            <option>BGN</option>
+                            <option>CZK</option>
+                            <option>DKK</option>
+                            <option>GBP</option>
+                            <option>HUF</option>
+                            <option>PLN</option>
+                            <option>RON</option>
+                            <option>SEK</option>
+                            <option>CHF</option>
+                            <option>ISK</option>
+                            <option>NOK</option>
+                            <option>HRK</option>
+                            <option>RUB</option>
+                            <option>TRY</option>
+                            <option>AUD</option>
+                            <option>BRL</option>
+                            <option>CAD</option>
+                            <option>CNY</option>
+                            <option>HKD</option>
+                            <option>IDR</option>
+                            <option>ILS</option>
+                            <option>INR</option>
+                            <option>KRW</option>
+                            <option>MXN</option>
+                            <option>MYR</option>
+                            <option>NZD</option>
+                            <option>PHP</option>
+                            <option>SGD</option>
+                            <option>THB</option>
+                            <option>ZAR</option>
+
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 2rem;">
+                <div class="input-group">
+                    <div class="input-group-prepend"><span class="input-group-text">Miktar</span></div>
+                    <input class="form-control" name="miktar" type="number">
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit" style="width: 100%;background: var(--danger);">Hesapla</button>
+            </div>
+            {% if info %}
+            <div id="result" class="pt-4">
+                <h1 class="h3 d-inline-block" style="margin-left: 50%;transform: translate(-50%);">Sonuç</h1>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">{{info.miktar}} {{info.d_1}}</span></div>
+                        <div class="form-control" id="total">{{info.result}} {{info.d_2}}</div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </form>
+    </section>
+</body>
+
+</html>
